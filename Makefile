@@ -11,7 +11,7 @@ PORT    ?= 80
 all:    kubeme build push
 deploy:	kubeme build push install
 
-build: 		; docker build -t $(IMAGE) .
+build: 		; docker build --no-cache -t $(IMAGE) .
 run: 		; docker run -p 81:80 $(IMAGE)
 push:		; docker push $(IMAGE)
 

@@ -1,5 +1,6 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { QuillModule }   from 'ngx-quill';
 
 import { AppComponent } from './app.component';
 
@@ -13,10 +14,11 @@ import { AppComponent } from './app.component';
 
     imports: [
 
-        BrowserModule
+        BrowserModule,
+        QuillModule
 
     ],
-    
+
     providers: [],
     bootstrap: [ AppComponent ]
 

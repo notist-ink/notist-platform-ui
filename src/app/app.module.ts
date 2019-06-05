@@ -4,6 +4,7 @@ import { QuillModule }     from 'ngx-quill';
 import { HeaderComponent } from './_layout/header/header.component';
 
 import { AppComponent } from './app.component';
+import { SidebarComponent } from './_layout/sidebar/sidebar.component';
 
 @NgModule({
 
@@ -11,7 +12,9 @@ import { AppComponent } from './app.component';
 
         AppComponent,
 
-        HeaderComponent
+        HeaderComponent,
+
+        SidebarComponent
 
     ],
 

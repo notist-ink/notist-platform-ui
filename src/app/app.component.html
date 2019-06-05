@@ -3,34 +3,19 @@
     <div class="sidebar">
 
         <app-sidebar></app-sidebar>
-        asf
+        <app-left-menu-sidebar></app-left-menu-sidebar>
+
     </div>
 
     <div class="main">
 
         <app-header></app-header>
 
-        <quill-editor>
-            <div quill-editor-toolbar>
-            <span class="ql-formats">
-              <button class="ql-bold" [title]="'Bold'"></button>
-            </span>
-                <span class="ql-formats">
-              <select class="ql-align" [title]="'Aligment'">
-                <option selected></option>
-                <option value="center"></option>
-                <option value="right"></option>
-                <option value="justify"></option>
-              </select>
-              <select class="ql-align" [title]="'Aligment2'">
-                <option selected></option>
-                <option value="center"></option>
-                <option value="right"></option>
-                <option value="justify"></option>
-              </select>
-            </span>
-            </div>
-        </quill-editor>
+        <div class="content">
+
+            <router-outlet></router-outlet>
+
+        </div>
 
     </div>
 

@@ -1,9 +1,8 @@
-import { NgModule }      from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { QuillModule }   from 'ngx-quill';
+import { NgModule }        from '@angular/core';
+import { BrowserModule }   from '@angular/platform-browser';
+import { HeaderComponent } from './_layout/header/header.component';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './_layout/header/header.component';
 
 @NgModule({
 
@@ -18,7 +17,7 @@ import { HeaderComponent } from './_layout/header/header.component';
     imports: [
 
         BrowserModule,
-        QuillModule
+        // QuillModule
 
     ],
 

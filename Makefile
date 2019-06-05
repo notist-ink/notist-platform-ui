@@ -17,4 +17,4 @@ push:		; docker push $(IMAGE)
 
 kubeme:
 
-	kubectl config use-context vmware
+	kubectl config use-context md

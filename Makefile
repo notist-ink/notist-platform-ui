@@ -3,7 +3,7 @@ include .make/Makefile.inc
 NS		?= default
 VERSION ?= $(shell git rev-parse HEAD)
 APP     ?= notist-platform-ui
-IMAGE   ?= gcr.io/matthewdavis-devqa/$(APP):$(VERSION)
+IMAGE   ?= registry.gitlab.com/notist.ink/$(APP):$(VERSION)
 PORT    ?= 80
 
 .PHONY: build

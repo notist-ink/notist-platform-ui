@@ -20,6 +20,8 @@ spec:
             labels:
                 app: $APP
         spec:
+            imagePullSecrets:
+                - name: docker-registry-notist-platform-ui
             containers:
                 - image: $IMAGE
                   name: $APP

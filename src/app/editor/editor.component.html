@@ -1,6 +1,6 @@
 <form [formGroup]="formGroup">
 
-    <div class="wrapper">
+    <div class="wrapper" (resize)="onResize($event)">
 
 
         <div class="top">
@@ -36,15 +36,21 @@
             <div class="middle">
 
                 <!--<div #editor id="editor"></div>-->
-                <quill-editor customToolbarPosition="bottom" style="height: 100px !important;" [modules]="modules" [customOptions]="options">
+                <quill-editor customToolbarPosition="bottom" [styles]="{ height: editorHeight }" [modules]="modules" [customOptions]="options">
 
 
                 </quill-editor>
 
             </div>
 
-            <div class="right">
+            <div mwlResizable
+                 [style.width]="rightWidth + 'px'"
+                 (resizeEnd)="onResizeEnd($event)"
+                 [enableGhostResize]="true"
+                 [resizeEdges]="{ left: true }"
+                 class="right">
 
+                <tags-selector></tags-selector>
 
             </div>
 

@@ -49,6 +49,16 @@ input, textarea {
 
 .ql-container {
     
-    height: 515px !important;
+    //height: 515px !important;
+    
+}
+
+mwlResizable {
+    box-sizing: border-box; // required for the enableGhostResize option to work
+}
+
+mat-chip {
+    
+    border-radius: 5px !important;
     
 }

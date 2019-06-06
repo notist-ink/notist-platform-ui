@@ -1,11 +1,13 @@
-import { Injectable }      from '@angular/core';
-import { MatDialog }       from '@angular/material';
-import { EditorComponent } from './editor.component';
+import { Injectable }              from '@angular/core';
+import { MatDialog, MatDialogRef } from '@angular/material';
+import { EditorComponent }         from './editor.component';
 
 @Injectable({
     providedIn: 'root'
 })
 export class EditorDialogService {
+
+    private ref: MatDialogRef<EditorComponent>;
 
     public constructor(private matDialog: MatDialog) {
 
@@ -13,7 +15,7 @@ export class EditorDialogService {
 
     public open(): void {
 
-        this.matDialog.open(EditorComponent, {
+        this.ref = this.matDialog.open(EditorComponent, {
 
             width: '1500px',
             height: '700px',

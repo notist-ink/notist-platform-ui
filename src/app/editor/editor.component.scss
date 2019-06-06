@@ -1,0 +1,56 @@
+:host {
+    
+    .wrapper {
+        
+        display: flex;
+        flex-direction: column;
+        
+        height: 100%;
+        
+        .top {
+            
+            flex: 0 1 50px;
+            background: #ccc;
+            
+        }
+        
+        .main {
+            
+            flex: 1;
+            background: blue;
+            
+            display: flex;
+            
+            .left {
+                
+                flex: 0 1 50px;
+                background: pink;
+                
+            }
+            
+            .middle {
+                
+                flex: 1;
+                background: #eee;
+                
+            }
+            
+            .right {
+                
+                flex: 0 1 250px;
+                background: pink;
+                
+            }
+            
+        }
+        
+        .bottom {
+            
+            flex: 0 1 50px;
+            background: red;
+            
+        }
+        
+    }
+    
+}

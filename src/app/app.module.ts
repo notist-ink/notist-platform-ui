@@ -1,16 +1,15 @@
-import { NgModule }                 from '@angular/core';
-import { MatTooltipModule }         from '@angular/material';
-import { BrowserModule }            from '@angular/platform-browser';
-import { BrowserAnimationsModule }  from '@angular/platform-browser/animations';
-import { RouterModule }             from '@angular/router';
-import { QuillModule }              from 'ngx-quill';
-import { HeaderComponent }          from './_layout/header/header.component';
-import { LeftMenuSidebarComponent } from './_layout/left-menu-sidebar/left-menu-sidebar.component';
-import { SidebarComponent }         from './_layout/sidebar/sidebar.component';
+import { NgModule }                          from '@angular/core';
+import { MatDialogModule, MatTooltipModule } from '@angular/material';
+import { BrowserModule }                     from '@angular/platform-browser';
+import { BrowserAnimationsModule }           from '@angular/platform-browser/animations';
+import { RouterModule }                      from '@angular/router';
+import { HeaderComponent }                   from './_layout/header/header.component';
+import { LeftMenuSidebarComponent }          from './_layout/left-menu-sidebar/left-menu-sidebar.component';
+import { SidebarComponent }                  from './_layout/sidebar/sidebar.component';
 
 import { AppComponent }      from './app.component';
 import { BooksComponent }    from './books/books.component';
-import { EditorComponent }   from './editor/editor.component';
+import { EditorModule }      from './editor/editor.module';
 import { HomeComponent }     from './home/home.component';
 import { NotesComponent }    from './notes/notes.component';
 import { SettingsComponent } from './settings/settings.component';
@@ -20,7 +19,6 @@ import { SettingsComponent } from './settings/settings.component';
     declarations: [
 
         AppComponent,
-        EditorComponent,
         HeaderComponent,
         HomeComponent,
         SidebarComponent,
@@ -35,8 +33,9 @@ import { SettingsComponent } from './settings/settings.component';
 
         BrowserModule,
         BrowserAnimationsModule,
+        EditorModule,
+        MatDialogModule,
         MatTooltipModule,
-        QuillModule,
 
         RouterModule.forRoot([
 

@@ -1,8 +1,8 @@
-import { CommonModule }                    from '@angular/common';
-import { NgModule }                        from '@angular/core';
-import { MatDialogModule, MatInputModule } from '@angular/material';
-import { QuillModule }                     from 'ngx-quill';
-import { EditorComponent }                 from './editor.component';
+import { CommonModule }    from '@angular/common';
+import { NgModule }        from '@angular/core';
+import { QuillModule }     from 'ngx-quill';
+import { SharedModule }    from '../shared/shared.module';
+import { EditorComponent } from './editor.component';
 
 @NgModule({
 
@@ -15,10 +15,10 @@ import { EditorComponent }                 from './editor.component';
     imports: [
 
         CommonModule,
-        MatDialogModule,
-        MatInputModule,
         QuillModule,
 
+        SharedModule,
+        
     ],
 
     entryComponents: [

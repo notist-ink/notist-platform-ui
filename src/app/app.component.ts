@@ -1,4 +1,5 @@
 import { AfterContentInit, Component } from '@angular/core';
+import { ThemesService }               from './_lib/themes.service';
 import { EditorDialogService }         from './editor/editor-dialog.service';
 
 @Component({
@@ -8,14 +9,15 @@ import { EditorDialogService }         from './editor/editor-dialog.service';
 })
 export class AppComponent implements AfterContentInit {
 
-    public constructor(private editorDialogService: EditorDialogService) {
+    public constructor(private editorDialogService: EditorDialogService,
+                       public themesService: ThemesService) {
 
     }
 
     public ngAfterContentInit(): void {
 
         this.editorDialogService.open();
-        
+
     }
 
 }

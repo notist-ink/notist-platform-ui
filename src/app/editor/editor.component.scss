@@ -1,53 +1,106 @@
 :host {
     
-    .wrapper {
-        
-        display: flex;
-        flex-direction: column;
+    form {
         
         height: 100%;
         
-        .top {
-            
-            flex: 0 1 50px;
-            background: #ccc;
-            
-        }
         
-        .main {
-            
-            flex: 1;
-            background: blue;
+        .wrapper {
             
             display: flex;
+            flex-direction: column;
             
-            .left {
+            height: 100%;
+            
+            .top {
                 
                 flex: 0 1 50px;
-                background: pink;
+                background: #ccc;
+                
+                padding: 5px;
+                
+                display: flex;
+                align-items: center;
+                
+                mat-form-field {
+                    
+                    flex: 1;
+                    
+                }
+                
+                .controls {
+                    
+                    
+                    display: flex;
+                    justify-content: flex-end;
+                    
+                    flex: 0 1 175px;
+                    
+                    i {
+                        
+                        margin: 5px;
+                        cursor: pointer;
+                        font-size: 19px;
+                        
+                        &:hover {
+                            
+                            color: rebeccapurple;
+                            
+                        }
+                        
+                    }
+                    
+                }
                 
             }
             
-            .middle {
+            .main {
                 
                 flex: 1;
-                background: #eee;
+                background: blue;
+                
+                display: flex;
+                
+                .left {
+                    
+                    flex: 0 1 50px;
+                    background: pink;
+                    
+                }
+                
+                .middle {
+                    
+                    flex: 1;
+                    background: #eee;
+                    
+                }
+                
+                .right {
+                    
+                    flex: 0 1 250px;
+                    background: #262626;
+                    
+                }
                 
             }
             
-            .right {
+            .bottom {
                 
-                flex: 0 1 250px;
-                background: pink;
+                display: flex;
+                justify-content: space-between;
+                
+                flex: 0 1 30px;
+                background: #151515;
+                
+                padding: 6px;
+                
+                button {
+                    
+                    margin-left: 7px;
+                    
+                }
                 
             }
-            
-        }
-        
-        .bottom {
-            
-            flex: 0 1 50px;
-            background: red;
             
         }
         

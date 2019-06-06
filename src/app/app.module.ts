@@ -13,6 +13,8 @@ import { EditorModule }      from './editor/editor.module';
 import { HomeComponent }     from './home/home.component';
 import { NotesComponent }    from './notes/notes.component';
 import { SettingsComponent } from './settings/settings.component';
+import { LeftMenuSidebarItemComponent } from './_layout/left-menu-sidebar/left-menu-sidebar-item/left-menu-sidebar-item.component';
+import { SliderComponent } from './_layout/slider/slider.component';
 
 @NgModule({
 
@@ -25,7 +27,9 @@ import { SettingsComponent } from './settings/settings.component';
         LeftMenuSidebarComponent,
         SettingsComponent,
         NotesComponent,
-        BooksComponent
+        BooksComponent,
+        LeftMenuSidebarItemComponent,
+        SliderComponent
 
     ],
 

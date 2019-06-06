@@ -1,38 +1,71 @@
-<div class="wrapper">
+<form [formGroup]="formGroup">
 
-    <div class="top">
-
-        <input matInput>
-
-    </div>
-
-    <div class="main">
+    <div class="wrapper">
 
 
-        <div class="left">
+        <div class="top">
 
+            <mat-form-field>
 
-        </div>
+                <input matInput
+                       formControlName="name"
+                       placeholder="Name">
 
-        <div class="middle">
+            </mat-form-field>
 
-            <quill-editor>
+            <div class="controls">
 
+                <i class="fas fa-edit"></i>
+                <i class="fas fa-lock-alt"></i>
+                <i class="fas fa-share-alt-square"></i>
+                <i class="fas fa-trash-alt"></i>
+                <i class="fas fa-external-link-alt"></i>
 
-            </quill-editor>
-
-        </div>
-
-        <div class="right">
-
+            </div>
 
         </div>
 
+        <div class="main">
+
+
+            <!--<div class="left">-->
+
+
+            <!--</div>-->
+
+            <div class="middle">
+
+                <!--<div #editor id="editor"></div>-->
+                <quill-editor customToolbarPosition="bottom" style="height: 100px !important;" [modules]="modules" [customOptions]="options">
+
+
+                </quill-editor>
+
+            </div>
+
+            <div class="right">
+
+
+            </div>
+
+        </div>
+
+        <div class="bottom">
+
+            <div class="left">
+
+
+            </div>
+
+            <div class="right">
+
+                <button mat-stroked-button style="background: #666">CANCEL</button>
+                <button mat-stroked-button style="background: #4caf50">SAVE</button>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <div class="bottom">
-
-
-    </div>
-
-</div>
+</form>

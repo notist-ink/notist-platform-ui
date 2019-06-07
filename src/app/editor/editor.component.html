@@ -50,7 +50,13 @@
                  [resizeEdges]="{ left: true }"
                  class="right">
 
-                <tags-selector></tags-selector>
+                <tags-selector label="People"
+                               [all]="[ { name: 'one', color: 'rebeccapurple' }, { name: 'two', color: 'yellow' }, { name: 'three', color: 'darkgreen' }, { name: 'four' } ]"
+                               [current]="[{ name: 'two', color: 'yellow' }]"></tags-selector>
+
+                <tags-selector label="Tags"
+                               [all]="[ { name: 'one', color: 'rebeccapurple' }, { name: 'two', color: 'yellow' }, { name: 'three', color: 'darkgreen' }, { name: 'four' } ]"
+                               [current]="[{ name: 'two', color: 'yellow' }]"></tags-selector>
 
             </div>
 

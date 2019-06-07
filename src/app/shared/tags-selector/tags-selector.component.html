@@ -1,6 +1,6 @@
 <mat-form-field class="example-chip-list">
 
-    <mat-chip-list #chipList aria-label="Fruit selection">
+    <mat-chip-list #chipList>
 
         <mat-chip *ngFor="let tag of current"
                   [selectable]="true"
@@ -14,7 +14,7 @@
 
         </mat-chip>
 
-        <input placeholder="New tag..."
+        <input [placeholder]="label"
                #input
                [formControl]="control"
                [matAutocomplete]="auto"

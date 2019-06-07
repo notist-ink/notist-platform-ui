@@ -1,5 +1,5 @@
 import { COMMA, ENTER }                                                     from '@angular/cdk/keycodes';
-import { Component, ElementRef, OnInit, ViewChild }                         from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild }                  from '@angular/core';
 import { FormControl }                                                      from '@angular/forms';
 import { MatAutocomplete, MatAutocompleteSelectedEvent, MatChipInputEvent } from '@angular/material';
 import { Observable }                                                       from 'rxjs';
@@ -18,11 +18,10 @@ export class TagsSelectorComponent implements OnInit {
     @ViewChild('input', { static: false }) input: ElementRef<HTMLInputElement>;
     @ViewChild('auto', { static: false }) matAutocomplete: MatAutocomplete;
 
-    public all: Array<Tag> = [ { name: 'one', color: 'rebeccapurple' }, { name: 'two', color: 'yellow' }, {
-        name: 'three',
-        color: 'darkgreen'
-    }, { name: 'four' } ];
-    public current: Array<Tag> = [ { name: 'one', color: 'rebeccapurple' } ];
+    @Input() public label: string;
+    @Input() public all: Array<Tag> = [];
+    @Input() public current: Array<Tag> = [ { name: 'one', color: 'rebeccapurple' } ];
+
     public filtered: Observable<Array<Tag>>;
     public control: FormControl = new FormControl();
     public separatorKeysCodes: number[] = [ ENTER, COMMA ];
